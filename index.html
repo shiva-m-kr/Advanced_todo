@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TaskFlow</title>
+
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <div class="container">
+      <!-- Sidebar -->
+      <aside class="sidebar">
+        <div class="logo">
+          <h1>TaskFlow</h1>
+        </div>
+
+        <nav>
+          <button class="nav-btn active">All Tasks</button>
+          <button class="nav-btn">Completed</button>
+          <button class="nav-btn">Pending</button>
+          <button class="nav-btn">Important</button>
+        </nav>
+
+        <div class="stats">
+          <div class="stat-card">
+            <h2 id="totalTasks">0</h2>
+            <p>Total Tasks</p>
+          </div>
+
+          <div class="stat-card">
+            <h2 id="completedTasks">0</h2>
+            <p>Completed</p>
+          </div>
+        </div>
+      </aside>
+
+      <!-- Main -->
+      <main class="main-content">
+        <!-- Header -->
+        <header class="header">
+          <div>
+            <h1>Manage Your Tasks</h1>
+            <p>Stay productive and organized.</p>
+          </div>
+          
+          <div class="theme-toggle-container">
+            <div class="theme-toggle-night">🌙</div>
+          <div class="theme-toggle-day">☀️</div>
+          </div>
+
+
+        </header>
+
+        <!-- Input Section -->
+        <section class="task-input-section">
+          <div class="input-group">
+            <input
+              type="text"
+              id="taskInput"
+              placeholder="Write your next task..."
+            />
+
+            <select id="prioritySelect">
+              <option value="low">Low</option>
+              
+              <option value="medium">Medium</option>
+              <option value="high">High</option>
+              
+            </select>
+
+            <button id="addTaskBtn">Add Task</button>
+          </div>
+        </section>
+
+        <!-- Filters -->
+        <section class="filters">
+          <button class="filter-btn active">Newest</button>
+          <button class="filter-btn">Oldest</button>
+          <button class="filter-btn">Priority</button>
+
+          <input type="text" placeholder="Search task..." id="searchInput" />
+        </section>
+
+        <!-- Task Container -->
+        <section class="task-container" id="taskContainer">
+          <!-- Dynamic Tasks -->
+        </section>
+      </main>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
